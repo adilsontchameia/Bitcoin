@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:async';
 
 class Home extends StatefulWidget {
   @override
@@ -9,7 +12,14 @@ class _HomeState extends State<Home> {
   //Preco
   String _preco = "0";
   //Metodo de recuperar preco
-  void _recuperarPreco() {}
+  void _recuperarPreco() async {
+    //URL da API
+    String url = "https://blockchain.info/ticker";
+    //Await - Vaia aguar a consulta
+    http.Response response = await http.get(url);
+
+
+  }
 
   @override
   Widget build(BuildContext context) {
