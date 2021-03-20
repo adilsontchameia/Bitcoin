@@ -22,8 +22,12 @@ class _HomeState extends State<Home> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/bitcoin_vector.png"),
+              Image.asset(
+                "images/bitcoin_vector.png",
+                width: 250,
+              ),
               Padding(
                 padding: EdgeInsets.only(top: 20, bottom: 30),
                 child: Text(
@@ -43,11 +47,14 @@ class _HomeState extends State<Home> {
                 color: Colors.orange,
                 padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
               ),
-              Text(
-                "Picture by: pngtree.com",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12,
+              Padding(
+                padding: EdgeInsets.only(top: 15),
+                child: Text(
+                  "Picture by: pngtree.com",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
                 ),
               ),
             ],
