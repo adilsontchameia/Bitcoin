@@ -6,25 +6,41 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String _preco = "0";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Bitcoin"),
-        backgroundColor: Colors.orange,
-        toolbarHeight: 30,
-        toolbarOpacity: 0.6,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Image.asset(
-            "images/bitcoin_vector.png",
-            width: 250,
+        appBar: AppBar(
+          title: Text("Bitcoin"),
+          backgroundColor: Colors.orange,
+          toolbarHeight: 30,
+          toolbarOpacity: 0.6,
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Image.asset("images/bitcoin_vector.png"),
+              Padding(
+                padding: EdgeInsets.only(top: 20, bottom: 30),
+                child: Text(
+                  "Valor da Bitcoin: " + _preco + " \$",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text(
+                  "Update",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+                color: Colors.orange,
+                padding: EdgeInsets.fromLTRB(30, 15, 30, 10),
+              )
+            ],
           ),
-          
-        ],
-      ),
-    );
+        ));
   }
 }
