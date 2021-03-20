@@ -18,7 +18,8 @@ class _HomeState extends State<Home> {
     //Await - Vaia aguar a consulta
     http.Response response = await http.get(url);
 
-
+    Map<String, dynamic> retorno = json.decode(response.body);
+    print("Resultado: " + retorno.toString());
   }
 
   @override
@@ -49,7 +50,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               FlatButton(
-                onPressed: () {},
+                onPressed: _recuperarPreco,
                 child: Text(
                   "Update",
                   style: TextStyle(fontSize: 20, color: Colors.white),
