@@ -16,7 +16,14 @@ class _HomeState extends State<Home> {
         toolbarOpacity: 0.6,
       ),
       body: Column(
-        children: [],
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset(
+            "images/bitcoin_vector.png",
+            width: 250,
+          ),
+          
+        ],
       ),
     );
   }
