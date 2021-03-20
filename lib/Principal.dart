@@ -6,7 +6,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //Preco
   String _preco = "0";
+  //Metodo de recuperar preco
+  void _recuperarPreco() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +41,15 @@ class _HomeState extends State<Home> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 color: Colors.orange,
-                padding: EdgeInsets.fromLTRB(30, 15, 30, 10),
-              )
+                padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
+              ),
+              Text(
+                "Picture by: pngtree.com",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                ),
+              ),
             ],
           ),
         ));
